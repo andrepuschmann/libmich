@@ -3263,7 +3263,7 @@ AntennaInfoDedicated-r10 ::=		SEQUENCE {
 											tm1, tm2, tm3, tm4, tm5, tm6, tm7, tm8-v920,
 											tm9-v1020, tm10-v1130, spare6, spare5, spare4,
 											spare3, spare2, spare1},
-	codebookSubsetRestriction-r10		BIT STRING			OPTIONAL,			-- Cond TMX
+	codebookSubsetRestriction-r10		BIT STRING (SIZE (2))			OPTIONAL,			-- Cond TMX
 	ue-TransmitAntennaSelection		CHOICE{
 		release							NULL,
 		setup							ENUMERATED {closedLoop, openLoop}
@@ -4085,21 +4085,21 @@ STAG-Id-r11::=				INTEGER (1..maxSTAG-r11)
 
 P-C-AndCBSR-r11 ::=	SEQUENCE {
 	p-C-r11						INTEGER (-8..15),
-	codebookSubsetRestriction-r11	BIT STRING
+	codebookSubsetRestriction-r11	BIT STRING (SIZE (2))
 }
 
 P-C-AndCBSR-r13 ::=	SEQUENCE {
 	p-C-r13						INTEGER (-8..15),
 	cbsr-Selection-r13			CHOICE{
 		nonPrecoded-r13				SEQUENCE {
-			codebookSubsetRestriction1-r13				BIT STRING,
-			codebookSubsetRestriction2-r13				BIT STRING
+			codebookSubsetRestriction1-r13				BIT STRING (SIZE (2)),
+			codebookSubsetRestriction2-r13				BIT STRING (SIZE (2))
 		},
 		beamformedK1a-r13			SEQUENCE {
-			codebookSubsetRestriction3-r13				BIT STRING
+			codebookSubsetRestriction3-r13				BIT STRING (SIZE (2))
 		},
 		beamformedKN-r13			SEQUENCE {
-			codebookSubsetRestriction-r13				BIT STRING
+			codebookSubsetRestriction-r13				BIT STRING (SIZE (2))
 		}
 	},
 	...
