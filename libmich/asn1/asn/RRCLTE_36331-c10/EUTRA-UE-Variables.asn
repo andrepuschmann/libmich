@@ -141,7 +141,7 @@ VarMeasReport ::=					SEQUENCE {
 	measId-v1250						MeasId-v1250					OPTIONAL,
 	cellsTriggeredList					CellsTriggeredList				OPTIONAL,
 	csi-RS-TriggeredList-r12			CSI-RS-TriggeredList-r12		OPTIONAL,
-	numberOfReportsSent					INTEGER
+	numberOfReportsSent					INTEGER (0..15)
 }
 
 CellsTriggeredList ::=				SEQUENCE (SIZE (1..maxCellMeas)) OF CHOICE {
