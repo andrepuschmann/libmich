@@ -1,5 +1,6 @@
 # Ordered list of LTE RRC modules
 # to be loaded sequentially
 EUTRA-RRC-Definitions.asn
+NBIOT-RRC-Definitions.asn
 EUTRA-UE-Variables.asn
-EUTRA-InterNodeDefinitions.asn
+NBIOT-UE-Variables.asn
